@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background: url("img/ScreenWin.png")no-repeat;
+            background-size:cover;
+
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            color: #1a1818;
+            text-align: left;
+            font-size: 12px;
+
+            overflow-x: hidden;
+        }
+        #menu{
+            /* position: relative;
+            margin:100px 500px ; */
+            position: absolute;
+            margin: 0;
+            /* transition: 0.3s; */
+        }
+        ul{
+            border: 1px solid #c7c4c4;
+            list-style: none;
+            background: #f8f4f4;
+            margin: 0;
+            /* padding: 3px; */
+            width:185px;
+        }
+        ul > li:hover{
+            background-color: #fff;
+        }
+        ul>li.itemes{
+            display: flex;
+            flex-flow: nowrap;
+        }
+        ul>li{
+            line-height: 20px;
+            margin-left: -15px;
+        }
+        ul> li> div.subMenu{
+            font-size: 20px;
+            color: #0f0d0dd7;
+            font:bold;
+        } 
+        ul> li> div.sub1,ul> li> div.sub4{
+            position: relative;
+            left: 144px;
+        }
+        ul> li> div.sub2{
+            position: relative;
+            left: 130px;
+        } 
+        ul> li> div.sub3{
+            position: relative;
+            left: 68px;
+            top:5px;
+        } 
+    
+        ul>li.pastcls{
+            color:#aca8a8 ;
+        }
+        ul>li>div.shortcutMove{
+            position: relative;
+            left: 90px;
+        } 
+        ul>li.graficCls:hover{
+            background-color: white;
+        }
+        ul>li.graficCls{
+            /* background: url("img/11.png")no-repeat ; */
+            position: relative;
+            margin-left:-30px;
+        }
+        ul > li.graficCls >div > img {
+            position: relative;
+            top:8px;
+        }
+        ul>li.displayCls:hover{
+            background-color: #fff;
+        }
+        ul>li.displayCls{
+            background: url("img/02.png")no-repeat ; 
+            position: relative;
+            margin-left:-30px;
+        }
+        ul>li.personalCls:hover{
+            background-color: #fff;
+        }
+        ul>li.personalCls{
+            background: url("img/33.png")no-repeat ;
+            position: relative;
+            margin-left:-30px;
+        }
+        /* ul>li.line{
+            border-bottom: 1px solid #746b6b;
+            width: 100%;
+        } */
+        ul>div.LINE{
+            border-bottom: 1px solid #746b6b;
+            width:210PX;
+           position: relative;
+           margin-left:-33px;
+           padding: 2px 0;
+        }
+        li:hover > ul{
+            transition: 0.5s;
+            opacity: 1;
+            visibility: visible;
+        }
+        li> ul{
+            position: absolute;
+            /* right: 225px; */
+            left:225px;
+            opacity: 0;
+            visibility: hidden;
+        }
+        ul.ulGrafic > li:hover{
+            background-color: #fff;
+        }
+        li:hover > ul.ulGrafic{
+            transition: 0.5s;
+            opacity: 1;
+            visibility: visible;
+        }
+        li> ul.ulGrafic{
+            position: absolute;
+            /* right: 225px; */
+            left: -235px;
+            opacity: 0;
+            visibility: hidden;
+        }
+        li> ul > li > div> img{
+            width:15px;
+            height: 15px;
+        }
+        li> ul > li.subNew{
+            position: relative;
+            margin-left:-6px;
+        }
+        li> ul > li.subNew >div > img {
+            position: absolute;
+            margin-left:-25px;
+            top:2px;
+        } 
+        li > ul>li.subitemView  {
+            position: relative;
+            left:-20px;
+        }
+        li > ul>li.subitemView >div > img {
+            position: relative;
+            left:-3px;
+            background-image: #f8f4f4;
+        }
+
+    </style>
+</head>
+<body>
+    <ul id="menu">
+        <li class="itemes">View 
+            <div class="subMenu sub1"> > </div>
+            <ul>
+                <li>Large icons</li>
+                <li class="subitemView"><div><img src="img/circleView.PNG">Medium icons </div> </li>
+                <div class="LINE"></div> 
+                <li  class="line">Small icons </li>
+                <li>Auto arrange icons</li>
+                <div class="LINE"></div> 
+                <li  class="line subitemView"><div><img src="img/ticView.PNG">Align icons to grid </div></li>
+                <li class="subitemView"><div><img src="img/ticView.PNG">Show desktop icons</div></li>                  
+            </ul>
+        </li>
+        <li class="itemes">Sort by<div class="subMenu sub2"> > </div>
+            <ul>
+                <li>Name</li>
+                <li> Size </li>
+                <li>Item type</li>
+                <li>Date Modified</li>              
+            </ul>
+        </li>
+        <div class="LINE"></div> 
+        <li  class="line">Refresh </li>            
+        <li class="pastcls">Paste</li>
+        <li class="pastcls"> Paste Shortcut</li>
+        <li class="itemes">Undo Move<div class="shortcutMove">Ctrl+Z</div></li>
+        <div class="LINE"></div> 
+        <li class="line">Open in Visual Studio</li>           
+        <li class="graficCls"> <div><img src="img/11.png">Graphics Properties...</div></li>
+        <div class="LINE"></div> 
+        <li class="graficCls itemes line ">
+            <div><img src="img/11.png">Graphics Options</div>
+            <div class="subMenu sub3"> > </div>
+            <ul class="ulGrafic">
+                <li>Panel Fit</li>
+                <li>Hot Keys</li>
+                <li>Tray Icon</li>
+                <li>Rotation</li>
+                <li>Balloon Notifications</li>
+                <li>Profiles</li> 
+                <li>Custom Resolutions</li>                    
+            </ul>
+        </li>
+        <div class="LINE"></div> 
+        <li class="itemes line">New<div class="subMenu sub4"> > </div>
+            <ul>
+                <li class="subNew"><div><img src="img/folde.PNG">Folder</div></li>
+                <div class="LINE"></div> 
+                <li class="subNew line"> <div><img src="img/shcut.PNG">Shortcut</div> </li>
+                <li class="subNew"><div><img src="img/ps.PNG">Adobe Photoshop Image</div> </li>
+                <li class="subNew"><div><img src="img/rar.PNG">Winrar archive</div></li>
+                <li class="subNew"><div><img src="img/doc.PNG">Rich Text Document</div></li>
+                <li class="subNew"><div><img src="img/text.PNG">Text Document</div></li>  
+                <li class="subNew"><div><img src="img/rar.PNG">WINRAR ZIP archive</div></li>                    
+            </ul>
+        </li>
+        <li class="displayCls"><div><img src="img/02.png">Display settings</div></li>
+        <li class="personalCls"><div><img src="img/33.png">Personalize</div></li>
+    </ul>
+    <script>
+        document.oncontextmenu = function(e){
+            menu.style.top = e.pageY+"px";
+            menu.style.left = e.pageX + "px";
+            return false;
+        }
+    </script>
+</body>
+</html>
